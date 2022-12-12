@@ -340,7 +340,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             for item in resultlist:
                 urls.append(item.url)
             await bot.edit_message(ev.chat,message,text=f'🔗Generando XDLinks...')
-            data = xdlink.parse(urls)
+            data = data = xdlink.parse(urls)
             if data:
                 txtfile.write(data)
             else:
